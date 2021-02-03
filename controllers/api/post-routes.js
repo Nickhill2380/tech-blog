@@ -55,8 +55,7 @@ router.get('/:id', (req,res) => {
     })
     .then(postData => {
         if (!postData) {
-          res.status(404).json({ message: 'No post found with this id' });
-          return;
+         return res.status(404).json({ message: 'No post found with this id' });
         }
         res.json(postData);
       })
@@ -93,8 +92,7 @@ router.put('/:id', (req,res) => {
     )
     .then(postData => {
         if(!postData) {
-            res.status(404).json({message: 'No post found with that id'});
-            return; 
+            return res.status(404).json({message: 'No post found with that id'});
         }
         res.json(postData);
     })
@@ -103,5 +101,23 @@ router.put('/:id', (req,res) => {
         res.status(500).json(err);
     })
 })
+
+router.delete('/:id', (req, res) => {
+    Post.destroy({
+        where:{
+            id: req.params.id
+        }
+    })
+    .then(postData => {
+        if(!postData) {
+           return res.status(404).json({ message: 'No post with that id found.'});
+        }
+        res.json(postData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 module.exports = router;

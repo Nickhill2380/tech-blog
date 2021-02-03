@@ -22,6 +22,7 @@ router.post('/', (req,res) => {
         res.status(400).json(err);
     });    
 });
+
 router.delete('/:id', (req,res) => {
     Comment.destroy({
         where: {
@@ -30,8 +31,7 @@ router.delete('/:id', (req,res) => {
     })
     .then(commentData=> {
         if(!commentData) {
-            res.status(400).json({message: "No comment found with that id."});
-            return;
+          return res.status(400).json({message: "No comment found with that id."});
         }
         res.json(commentData);
     })
