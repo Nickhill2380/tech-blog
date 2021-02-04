@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
         const post = postData.map(post => post.get({plain: true}));
 
         res.render('homepage', {
-            posts,
+            post,
             loggedIn: req.session.loggedIn
         }); 
     })
@@ -36,6 +36,14 @@ router.get('/', (req, res) => {
         console.log(err);
         return res.status(500).json(err);
     });
+});
+
+router.get('/login', (req,res) => {
+    if(req.session.loggedIn) {
+        return res.redirect('/');
+    }
+
+    return res.render('login');
 });
 
 module.exports = router;
