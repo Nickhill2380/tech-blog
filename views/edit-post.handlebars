@@ -11,7 +11,7 @@
             <input name="post-textarea" type="text" value="{{post.text_area}}" />
         </div>
         <div>
-            Created by you on {{post.created_at}}
+            Created by you on {{format_date post.created_at}}
 
             <a href="/post/{{post.id}}">{{post.comments.length}}</a>
         </div>
