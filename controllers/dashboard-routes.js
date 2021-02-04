@@ -39,4 +39,44 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/edit/:id', (req,res) => {
+    Post.findByPk(req.params.id, {
+        attributes: [
+            'id',
+            'title',
+            'text_area',
+            'created_at'
+        ],
+        include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+    .then(userData => {
+        if(userData) {
+            const post = userData.get({ plain: true});
+
+            return res.render('edit-post', {
+                post,
+                loggedIn: true
+            });
+        } else {
+            return res.status(404).end();
+        }
+    })
+    .catch(err => {
+        return res.status(500).json(err);
+    });
+});
+
 module.exports = router;
