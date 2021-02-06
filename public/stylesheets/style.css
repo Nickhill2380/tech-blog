@@ -8,6 +8,7 @@
     margin: 0;
     font-family: sans-serif;
     color: #333;
+    text-align: center;
   }
   
   a {
@@ -176,3 +177,15 @@
     padding: 1%;
     font-size: 110%;
   }
+
+  #post-text {
+    width: 75%;
+    height: 200px;
+    margin: 10px;
+  }
+  
+  #post-title{
+    width: 75%;
+    margin: 10px;
+  }
+
