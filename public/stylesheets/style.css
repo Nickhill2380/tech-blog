@@ -180,12 +180,11 @@
 
   #post-text {
     width: 75%;
-    height: 200px;
-    margin: 10px;
+    height: 100%;
+    box-sizing: fill;
   }
   
   #post-title{
     width: 75%;
     margin: 10px;
   }
-

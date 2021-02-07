@@ -16,7 +16,7 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-      text_area: {
+      text_field: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {

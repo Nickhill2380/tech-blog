@@ -6,11 +6,11 @@
   <form class="edit-post-form">
     <div>
       <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+      <input type="text" id="post-title" name="post-title" value="{{post.title}}">
     </div>
     <div>
         <label for="post-text">Text Area</label>
-        <input type="text" id="post-text" name="post-text" />
+        <textarea id="post-text" name="post-text" value="{{post.text_field}}"></textarea>
     </div>
     <div>
       {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
