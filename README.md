@@ -23,15 +23,9 @@ The website on heroku will require no installation. Setting up on your localhost
 
 Please see attached screenhot and link to the heroku site, https://tech-blog2380.herokuapp.com/ 
 
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/71850826/107155338-d3ae2f80-6945-11eb-8511-e07c96ef086c.png)
 
 I adapted the inactivity function from https://gist.github.com/gerard-kanters/2ce9daa5c23d8abe36c2
-
-
 
 ## Questions
 
