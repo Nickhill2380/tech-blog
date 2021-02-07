@@ -21,7 +21,7 @@ The website on heroku will require no installation. Setting up on your localhost
 
 ## Usage
 
-Please see attached screenhot and link to the heroku site. 
+Please see attached screenhot and link to the heroku site, https://tech-blog2380.herokuapp.com/ 
 
 
 

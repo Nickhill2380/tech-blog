@@ -3,17 +3,17 @@
   }
 
   :root {
-    --primary-color: black;
-    --secondary-color: green;
-    --tertiary-color: white;
-    --quaternary-color: purple;
+    --primary-color: #5D5C61;
+    --secondary-color: #379683;
+    --tertiary-color: #7395AE;
+    --quaternary-color: #B1A296;
   }
   
   body, html {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: Hand,sans-serif;
     color: var(--secondary-color);
     text-align: center;
     background-color: var(--tertiary-color);
@@ -95,6 +95,9 @@
   header h1 {
     font-size: 45px;
     background-color: var(--primary-color);
+    padding: 25px;
+    border-radius: 50%;
+    border-color: var(--quaternary-color);
   }
   
   main {
