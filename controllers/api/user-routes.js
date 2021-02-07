@@ -92,14 +92,14 @@ router.post('/login', (req,res) => {
     });
 });
 
-router.post('logout', (req, res) => {
-    if(res.session.loggedIn) {
+router.post('/logout', (req, res) => {
+    if(req.session.loggedIn) {
         req.session.destroy(() =>{
-            return res.status(204).end();
+            res.status(204).end();
         });
     }
     else{
-        return res.status(404).end();
+        res.status(404).end();
     }
 });
 

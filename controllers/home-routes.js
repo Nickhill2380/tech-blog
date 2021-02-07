@@ -5,6 +5,7 @@ const { User, Comment, Post} = require('../models');
 router.get('/', (req, res) => {
     Post.findAll({
         attributes:[
+            'id',
             'title',
             'text_area',
             'created_at'
@@ -25,10 +26,10 @@ router.get('/', (req, res) => {
         ]
     })
     .then(postData => {
-        const post = postData.map(post => post.get({plain: true}));
+        const posts = postData.map(post => post.get({plain: true}));
 
         res.render('homepage', {
-            post,
+            posts,
             loggedIn: req.session.loggedIn
         }); 
     })
