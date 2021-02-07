@@ -22,7 +22,7 @@ function idleTimer() {
 
     function resetTimer() {
         clearTimeout(time);
-        time = setTimeout(logout,(1000 * 60));
+        time = setTimeout(logout,(1000 * 60)*5);
     }
 }
 

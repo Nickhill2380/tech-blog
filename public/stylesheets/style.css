@@ -1,19 +1,27 @@
 * {
     box-sizing: border-box;
   }
+
+  :root {
+    --primary-color: black;
+    --secondary-color: green;
+    --tertiary-color: white;
+    --quaternary-color: purple;
+  }
   
   body, html {
     height: 100%;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color: var(--secondary-color);
     text-align: center;
+    background-color: var(--tertiary-color);
   }
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: var(--quaternary-color);
     font-weight: bold;
     transition: color .1s;
   }
@@ -23,10 +31,10 @@
   }
   
   button {
-    background-color: #225ca3;
+    background-color: var(--quaternary-color);
     border: 0;
     padding: 1%;
-    color: white;
+    color: var(--tertiary-color);
     font-weight: bold;
     transition: background-color .1s;
     cursor: pointer;
@@ -81,10 +89,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 1%;
+    font-size: x-large;
   }
   
   header h1 {
-    font-size: 1em;
+    font-size: 45px;
+    background-color: var(--primary-color);
   }
   
   main {
@@ -121,6 +131,7 @@
   .post {
     margin-bottom: 2%;
     line-height: 150%;
+    background-color: var(--primary-color);
   }
   
   .post .title span {
